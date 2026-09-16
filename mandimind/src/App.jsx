@@ -7,12 +7,34 @@ function App() {
   const [location, setLocation] = useState("");
   const [showResults, setShowResults] = useState(false);
 
-  const handleSearch = (e) => {
-    e.preventDefault();
-    if (crop && quantity && location) {
-      setShowResults(true);
-    }
-  };
+  const handleSearch = async (e) => {
+  e.preventDefault();
+
+  if (!crop || !quantity || !location) return;
+
+  const API_URL = import.meta.env.VITE_API_URL;
+
+  try {
+    const response = await fetch(`${API_URL}/api/search`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        crop,
+        quantity,
+        location,
+      }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    setShowResults(true);
+  } catch (error) {
+    console.error("API Error:", error);
+  }
+};
 
   return (
     <div className="app">
