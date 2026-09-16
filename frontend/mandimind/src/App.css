@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f8f1;
+  color: #17251a;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  height: 75px;
+  padding: 0 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-bottom: 1px solid #e3e8dc;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #315c35;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  color: #536154;
+}
+
+.nav-links span {
+  cursor: pointer;
+}
+
+.hero {
+  padding: 75px 8% 80px;
+  background: linear-gradient(135deg, #eef4e5, #f9faf5);
+}
+
+.hero-text {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.tag {
+  color: #648044;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #608044;
+}
+
+.subtitle {
+  font-size: 19px;
+  color: #687266;
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.search-card {
+  margin: 45px auto 0;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(40, 60, 40, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #465347;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d9dfd4;
+  border-radius: 9px;
+  font-size: 14px;
+  background: #fafbf8;
+}
+
+.search-card button {
+  align-self: end;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #52743e;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.search-card button:hover {
+  background: #3f6130;
+}
+
+.results {
+  padding: 75px 8%;
+  background: white;
+  text-align: center;
+}
+
+.results h2,
+.how h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.result-subtitle {
+  color: #727b72;
+  margin-bottom: 35px;
+}
+
+.mandi-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+
+.mandi-card {
+  border: 1px solid #e0e5dd;
+  padding: 25px;
+  border-radius: 15px;
+  background: #fbfcfa;
+}
+
+.mandi-card.best {
+  border: 2px solid #75965b;
+}
+
+.recommended {
+  display: inline-block;
+  background: #e5efd9;
+  color: #55733f;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 6px 9px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.mandi-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.mandi-card p {
+  color: #747c74;
+  font-size: 14px;
+}
+
+.price {
+  font-size: 27px;
+  font-weight: bold;
+  margin: 25px 0;
+  color: #3d6333;
+}
+
+.price small {
+  font-size: 12px;
+  color: #777;
+  font-weight: normal;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-top: 1px solid #e4e8e2;
+  color: #687168;
+}
+
+.details strong {
+  color: #263429;
+}
+
+.details .profit {
+  color: #4d773d;
+}
+
+.select-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #668353;
+  background: white;
+  color: #4d703c;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.how {
+  padding: 75px 8%;
+  background: #eef3e8;
+  text-align: center;
+}
+
+.steps {
+  max-width: 1000px;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.steps span {
+  font-size: 14px;
+  color: #6a884f;
+  font-weight: bold;
+}
+
+.steps h3 {
+  margin: 12px 0;
+}
+
+.steps p {
+  color: #697269;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 30px 8%;
+  text-align: center;
+  background: #203322;
+  color: white;
+}
+
+footer p {
+  margin-top: 8px;
+  color: #bdc8bc;
+}
+
+@media (max-width: 800px) {
+  .nav-links {
+    display: none;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+
+  .search-card {
+    grid-template-columns: 1fr;
+  }
+
+  .mandi-grid,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
